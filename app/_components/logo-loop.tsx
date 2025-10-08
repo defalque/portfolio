@@ -28,7 +28,7 @@ function LogoLoop({ ariaLabel }: { ariaLabel: string }) {
         aria-hidden
         className="w-full overflow-hidden mask-x-from-95% sm:mask-x-from-97%"
       >
-        <div className="animate-scroll flex w-[640%] sm:w-[480%] md:w-[650%] lg:w-[460%]">
+        <div className="animate-scroll flex w-[800%] sm:w-[480%] md:w-[680%] lg:w-[460%]">
           {[...logos, ...logos].map((logo, idx) => (
             <div
               className="group flex w-xl items-center justify-center px-6 py-4"

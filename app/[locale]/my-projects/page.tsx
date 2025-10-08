@@ -56,8 +56,8 @@ function Page() {
       status: "deployed" as const,
       srcLight: portfolio,
       srcDark: portfolioDark,
-      repoLink: "https://github.com/defalque/Next.js_Vesugusto",
-      websiteLink: "https://www.vesugusto.dev",
+      repoLink: "https://github.com/defalque/portfolio",
+      websiteLink: "https://marcodefalco.vercel.app/",
       stack: [
         "nextjs",
         "typescript",

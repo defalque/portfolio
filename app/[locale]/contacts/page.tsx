@@ -2,6 +2,7 @@ import ContactForm from "@/app/_components/ui/form/contact-form";
 import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 export async function generateMetadata({
   params,
@@ -57,9 +58,12 @@ function Page() {
 
             <div>
               <span>{t("phone-label")}: </span>
-              <span className="font-medium text-black dark:text-white">
+              <Link
+                href={`tel:+39${t("phone-number").replace(/\s+/g, "").startsWith("+") ? t("phone-number").replace(/\s+/g, "").slice(3) : t("phone-number").replace(/\s+/g, "")}`}
+                className="font-medium text-black underline-offset-2 transition-discrete duration-300 hover:underline active:underline dark:text-white"
+              >
                 {t("phone-number")}
-              </span>
+              </Link>
             </div>
 
             <div className="flex items-center gap-2">

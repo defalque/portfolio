@@ -20,7 +20,7 @@ function NavLinks() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="dark:focus-visible::ring-orange-400 rounded-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 dark:focus-visible:ring-orange-400"
+              className="dark:focus-visible::ring-orange-400 rounded-xs py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 sm:py-0 dark:focus-visible:ring-orange-400"
             >
               <span
                 className={`${pathname === link.href ? "text-orange-600 dark:text-orange-400" : "titleColor"}`}

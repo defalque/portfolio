@@ -52,7 +52,7 @@ function Footer() {
           ))}
         </ul>
 
-        <p className="mx-auto w-fit py-2 text-xs text-black/70 sm:text-sm dark:text-white/60">
+        <p className="mx-auto w-fit py-2 text-center text-xs text-black/70 sm:text-sm dark:text-white/60">
           Copyright © {new Date().getFullYear()} Marco De Falco. {t("rights")}
         </p>
       </div>

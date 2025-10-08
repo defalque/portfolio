@@ -44,7 +44,7 @@ function ProjectCard({
           </span>
         </div>
 
-        <ul className="flex items-center gap-3">
+        <ul className="flex items-center gap-1.5 sm:gap-3">
           <li>
             <ProjectCardDrawer
               triggerAriaLabel={t("details")}

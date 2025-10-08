@@ -1,0 +1,139 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "Navigation": {
+    "my-projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "Toggle": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Locale": {
+    "select": "Choose language",
+    "en": "English",
+    "it": "Italian"
+  },
+  "Hero": {
+    "job": "Web developer",
+    "text": "Hey! I'm <bold>{name}</bold>. I build modern, accessible, and high-performance user interfaces — combining clean design with modern technology to deliver high-quality web experiences.",
+    "aria-text": "Hey! I'm Marco De Falco. I build modern, accessible, and high-performance user interfaces — combining clean design with modern technology to deliver high-quality web experiences.",
+    "aria-social": "Connect with me",
+    "aria-skills": "My skills",
+    "github": "Go to Marco De Falco's Github page",
+    "gmail": "Send an email to Marco De Falco via Gmail"
+  },
+  "About": {
+    "title-about": "About Me",
+    "title-about-text": "I am 27 years old and hold a <link>bachelor's degree in Computer Science</link>. In recent years, I have focused my professional development on web technologies, with a particular emphasis on frontend development.",
+    "aria-title-about-text": "I am 27 years old and hold a bachelor's degree in Computer Science. In recent years, I have focused my professional development on web technologies, with a particular emphasis on frontend development.",
+    "link": "Open my bachelor's certificate PDF"
+  },
+  "My-Work": {
+    "title-whatido": "What I do?",
+    "subtitle1-whatido": "Web development",
+    "text1-whatido": "Business and Showcase Websites",
+    "text2-whatido": "Single Page Applications and Web Apps",
+    "text3-whatido": "E-Commerce Platforms and Blogs",
+    "subtitle2-whatido": "Mobile development",
+    "text4-whatido": "Cross-platform mobile apps with React Native (still learning...)"
+  },
+  "Skills": {
+    "skills": "Tech Skills",
+    "frontend": "<b>Frontend Development:</b> Proficient in using React.js and modern frontend architectures, with a strong preference for Tailwind CSS to build fast and responsive user interfaces. Solid command of HTML5, CSS3, and JavaScript (ES6+).",
+    "mobile": "<b>Mobile Development:</b> Currently expanding skills in React Native for cross-platform mobile development.",
+    "full-stack": "<b>Full-Stack & Frameworks:</b> Good experience with Next.js for building full-stack applications, leveraging both static generation and server-side rendering.",
+    "pl": "<b>Programming Languages:</b> Strong familiarity with JavaScript and TypeScript. University-level basic knowledge of C and Java.",
+    "db": "<b>Databases & Backend:</b> Good command of relational databases (PostgreSQL and MySQL) and NoSQL solutions like MongoDB. Hands-on experience with Supabase as a backend-as-a-service platform.",
+    "tools": "<b>Version Control & Tooling:</b> Familiar with Git-based workflows, modern development environments, and collaborative coding practices."
+  },
+  "My-Projects": {
+    "title": "My Projects",
+    "details": "Open project's details",
+    "link1-label": "Go to the project's repository",
+    "link2-label": "Go to the project's homepage",
+    "deployed": "Deployed",
+    "development": "On development"
+  },
+  "Projects": {
+    "nextjs": "Next.js",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "supabase": "Supabase",
+    "tailwind": "TailwindCSS",
+    "authjs": "Auth.js",
+    "resend": "Resend",
+    "stripe": "Stripe",
+    "motion": "Motion",
+    "embla": "Embla Carousel",
+    "shadcn": "Shadcn UI / Radix UI",
+    "zod": "Zod",
+    "headless": "Headless UI",
+    "form": "React Hook Form",
+    "category": "Category",
+    "tech-stack": "Tech stack",
+    "ecommerce": "E-commerce",
+    "portfolio": "Portfolio",
+    "dashboard": "Dashboard"
+  },
+  "Contacts": {
+    "title": "Contact me",
+    "info": "Personal details",
+    "form": "Form to get in touch with me",
+    "form-p": "Interested in working together or need more details? Let’s connect.",
+    "location": "Location",
+    "place": "Somma Vesuviana, Naples, Italy",
+    "speaks": "Languages",
+    "languages": "Italian, English",
+    "phone-label": "Phone number",
+    "phone-number": "+39 327 328 2733",
+    "transport": "Has reliable transportation",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholderMessage": "Type a message...",
+    "submit": "Submit",
+    "loading": "Processing...",
+    "success": "Sent",
+    "required": "Required field.",
+    "maxLength": "is too long.",
+    "minLength": "is too short.",
+    "namePattern": "Please enter letters and spaces only.",
+    "emailPattern": "Please enter a valid email.",
+    "messagePattern": "Message must include readable content.",
+    "invalidName": "Invalid name",
+    "invalidEmail": "Invalid email.",
+    "invalidMessage": "Invalid message.",
+    "emaiLError": "An error occurred during processing.",
+    "genericError": "Unexpected error. Please try again later."
+  },
+  "Blog": {
+    "title": "Blog coming soon..."
+  },
+  "Footer": {
+    "rights": "All rights reserved.",
+    "next": "Built with",
+    "tw": "Styled with",
+    "vercel": "Deployed on"
+  },
+  "Not-Found": {
+    "title": "Not Found",
+    "description": "The page you're looking for doesn't exist. Try searching for what you need below.",
+    "projects": "My Projects",
+    "contacts": "Contacts"
+  },
+  "Error": {
+    "title": "Something went wrong!",
+    "button": "Try again"
+  },
+  "Metadata": {
+    "home-description": "Hey! I'm Marco De Falco. I build modern, accessible, and high-performance user interfaces — combining clean design with modern technology to deliver high-quality web experiences.",
+    "my-projects-title": "Projects",
+    "my-projects-description": "A selection of projects I’ve worked on, featuring elegant interfaces, tailored solutions, and optimized performance. Each piece reflects my thoughtful approach to design and code quality.",
+    "contacts-title": "Contacts",
+    "contacts-description": "Interested in working together or need more details? Let’s connect."
+  }
+}

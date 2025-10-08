@@ -1,0 +1,140 @@
+{
+  "HomePage": {
+    "title": "Ciao mondo!"
+  },
+  "Navigation": {
+    "my-projects": "Progetti",
+    "contacts": "Contatti"
+  },
+  "Toggle": {
+    "toggle": "Cambia tema",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema"
+  },
+  "Locale": {
+    "select": "Seleziona lingua",
+    "en": "Inglese",
+    "it": "Italiano"
+  },
+  "Hero": {
+    "job": "Sviluppatore web",
+    "text": "Ciao! Mi chiamo <bold>{name}</bold>. Realizzo interfacce moderne, accessibili e performanti - unendo design curato, tecnologie all’avanguardia e grande attenzione ai dettagli per offrire esperienze web di alta qualità.",
+    "aria-text": "Ciao! Mi chiamo Marco De Falco. Realizzo interfacce moderne, accessibili e performanti, unendo design curato, tecnologie all’avanguardia e grande attenzione ai dettagli per offrire esperienze web di alta qualità.",
+    "aria-social": "Contatti social",
+    "aria-skills": "Competenze",
+    "github": "Visita la pagina Github di Marco De Falco",
+    "gmail": "Invia una email a Marco De Falco tramite Gmail"
+  },
+  "About": {
+    "title-about": "Su di me",
+    "title-about-text": "Ho 27 anni e una <link>laurea triennale in Informatica</link>. Nell'ultimo anno ho orientato il mio percorso professionale verso le tecnologie web, con un focus particolare sullo sviluppo frontend.",
+    "aria-title-about-text": "Ho 27 anni e una laurea triennale in Informatica. Nell'ultimo anno ho orientato il mio percorso professionale verso le tecnologie web, con un focus particolare sullo sviluppo frontend.",
+    "link": "Apri il PDF della mia laurea."
+  },
+  "My-Work": {
+    "title-whatido": "Cosa faccio?",
+    "subtitle1-whatido": "Sviluppo web",
+    "text1-whatido": "Siti vetrina e aziendali",
+    "text2-whatido": "Single Page Applications e Applicazioni Web",
+    "text3-whatido": "E-Commerce e Blog",
+    "subtitle2-whatido": "Sviluppo mobile",
+    "text4-whatido": "Applicazioni mobile cross-platform con React Native (sto ancora imparando...)"
+  },
+  "Skills": {
+    "skills": "Competenze tecniche",
+    "frontend": "<b>Sviluppo Frontend:</b> Preparato nell’utilizzo di React.js e delle moderne architetture frontend, con una forte preferenza per Tailwind CSS per lo sviluppo di interfacce utente rapide e responsive. Ottima padronanza di HTML5, CSS3 e JavaScript (ES6+).",
+    "mobile": "<b>Sviluppo Mobile:</b> Attualmente in fase di apprendimento di React Native per lo sviluppo mobile cross-platform.",
+    "full-stack": "<b>Full-Stack & Framework:</b> Buona esperienza con Next.js per la creazione di applicazioni full-stack, sfruttando sia il rendering statico che quello lato server.",
+    "pl": "<b>Linguaggi di Programmazione:</b> Grande familiarità con JavaScript e TypeScript. Conoscenza di base universitaria di C e Java.",
+    "db": "<b>Database & Backend:</b> Buona padronanza di database relazionali (PostgreSQL e MySQL) e soluzioni NoSQL come MongoDB. Esperienza pratica con Supabase come piattaforma backend-as-a-service.",
+    "tools": "<b>Controllo Versione & Tooling:</b> Familiarità con i flussi di lavoro basati su Git, ambienti di sviluppo moderni e pratiche collaborative di coding."
+  },
+  "My-Projects": {
+    "title": "I miei progetti",
+    "details": "Apri dettagli del progetto",
+    "link1-label": "Vai alla repository del progetto",
+    "link2-label": "Vai all homepage del progetto",
+    "deployed": "In produzione",
+    "development": "In sviluppo"
+  },
+  "Projects": {
+    "nextjs": "Next.js",
+    "supabase": "Supabase",
+    "tailwind": "TailwindCSS",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "authjs": "Auth.js",
+    "resend": "Resend",
+    "stripe": "Stripe",
+    "motion": "Motion",
+    "embla": "Embla Carousel",
+    "shadcn": "Shadcn UI / Radix UI",
+    "zod": "Zod",
+    "headless": "Headless UI",
+    "form": "React Hook Form",
+    "vesugusto": "Vesugusto",
+    "category": "Categoria",
+    "tech-stack": "Stack tecnologico",
+    "ecommerce": "E-commerce",
+    "portfolio": "Portfolio",
+    "dashboard": "Dashboard"
+  },
+  "Contacts": {
+    "title": "Contattami",
+    "info": "Informazioni personali",
+    "form": "Modulo per contattarmi",
+    "form-p": "Hai un progetto in mente o qualsiasi richiesta di informazioni? Non esitare a contattarmi.",
+    "location": "Posizione",
+    "place": "Somma Vesuviana, Napoli",
+    "speaks": "Lingue",
+    "languages": "Italiano, Inglese",
+    "phone-label": "Numero di cellulare",
+    "phone-number": "327 328 2733",
+    "transport": "Automunito",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "placeholderMessage": "Scrivi un messaggio...",
+    "submit": "Invia",
+    "loading": "Invio in corso...",
+    "success": "Inviato",
+    "required": "Campo obbligatorio.",
+    "maxLength": "troppo lungo.",
+    "minLength": "troppo corto.",
+    "namePattern": "Sono ammessi solo lettere e spazi.",
+    "emailPattern": "Inserisci una email valida.",
+    "messagePattern": "Il messaggio on può contenere solo spazi.",
+    "invalidName": "Nome non valido.",
+    "invalidEmail": "Email non valida.",
+    "invalidMessage": "Messaggio non valido.",
+    "emailError": "Si è verificato un errore durante l'elaborazione.",
+    "genericError": "Errore imprevisto. Riprova più tardi."
+  },
+  "Blog": {
+    "title": "Blog in costruzione..."
+  },
+  "Footer": {
+    "rights": "Tutti i diritti riservati.",
+    "next": "Realizzato con",
+    "tw": "Stilizzato con",
+    "vercel": "Distribuito su"
+  },
+  "Not-Found": {
+    "title": "Pagina non trovata",
+    "description": "La pagina che stavi cercando non esiste. Prova a cercare quello che ti serve qui sotto.",
+    "projects": "I miei progetti",
+    "contacts": "Contatti"
+  },
+  "Error": {
+    "title": "Qualcosa è andato storto!",
+    "button": "Riprova"
+  },
+  "Metadata": {
+    "home-description": "Ciao! Mi chiamo Marco De Falco. Realizzo interfacce moderne, accessibili e performanti, unendo design curato, tecnologie all’avanguardia e grande attenzione ai dettagli per offrire esperienze web di alta qualità.",
+    "my-projects-title": "Progetti",
+    "my-projects-description": "Una selezione di progetti a cui ho lavorato, tra interfacce eleganti, soluzioni personalizzate e performance ottimizzate. Ogni lavoro riflette il mio approccio attento al design e alla qualità del codice.",
+    "contacts-title": "Contatti",
+    "contacts-description": "Hai un progetto in mente o vuoi semplicemente salutare? Scrivimi! Sono sempre aperto a nuove collaborazioni e opportunità interessanti."
+  }
+}

@@ -8,13 +8,16 @@ import twDark from "../../../../public/logos/tailwindcss-logotype-white.svg";
 import vercelLight from "../../../../public/logos/vercel-logotype-light.svg";
 import vercelDark from "../../../../public/logos/vercel-logotype-dark.svg";
 
-const brands = [
+import Link from "next/link";
+
+const BRANDS = [
   {
     name: "next",
     href: "https://nextjs.org/",
     srcLight: nextLight,
     srcDark: nextDark,
     altText: "Next.js logo",
+    width: 90,
   },
   {
     name: "tw",
@@ -22,6 +25,7 @@ const brands = [
     srcLight: twLight,
     srcDark: twDark,
     altText: "TailwindCSS logo",
+    width: 130,
   },
   {
     name: "vercel",
@@ -29,6 +33,7 @@ const brands = [
     srcLight: vercelLight,
     srcDark: vercelDark,
     altText: "Vercel logo",
+    width: 90,
   },
 ];
 
@@ -39,15 +44,22 @@ function Footer() {
     <footer className="mx-auto w-full font-stretch-expanded [--md-spacing-x:--spacing(0)] [--sm-spacing-x:--spacing(10)] [--spacing-x:--spacing(5)] md:max-w-2xl lg:max-w-4xl">
       <div className="_border-t mx-(--spacing-x) space-y-10 pt-16 pb-5 font-stretch-expanded sm:mx-(--sm-spacing-x) md:mx-(--md-spacing-x)">
         <ul className="mx-auto flex w-fit flex-col items-center gap-5 text-xs text-black/70 sm:text-sm dark:text-white/60">
-          {brands.map((brand) => (
-            <li key={brand.name} className="flex items-center gap-2">
+          {BRANDS.map((brand) => (
+            <li key={brand.name} className="flex items-center gap-3">
               <span>{t(brand.name)}</span>
-              <LogoType
+              <Link
                 href={brand.href}
-                srcLight={brand.srcLight}
-                srcDark={brand.srcDark}
-                altText={brand.altText}
-              />
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit rounded-xs transition-opacity duration-300 hover:opacity-80 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:outline-none dark:focus-visible:ring-orange-400"
+              >
+                <LogoType
+                  srcLight={brand.srcLight}
+                  srcDark={brand.srcDark}
+                  alt={brand.altText}
+                  width={brand.width}
+                />
+              </Link>
             </li>
           ))}
         </ul>

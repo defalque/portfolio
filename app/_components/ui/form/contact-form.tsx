@@ -2,7 +2,6 @@
 
 import { sendEmail } from "@/lib/actions";
 import { CircleCheckIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "sonner";
@@ -13,7 +12,26 @@ export type Inputs = {
   message: string;
 };
 
-function ContactForm() {
+function ContactForm({
+  t,
+}: {
+  t: {
+    form: string;
+    required: string;
+    name: string;
+    maxLength: string;
+    minLength: string;
+    namePattern: string;
+    email: string;
+    emailPattern: string;
+    placeholderMessage: string;
+    message: string;
+    messagePattern: string;
+    loading: string;
+    success: string;
+    submit: string;
+  };
+}) {
   const {
     register,
     handleSubmit,
@@ -43,28 +61,26 @@ function ContactForm() {
       return;
     }
 
-    console.log(result);
     reset();
     setIsSentSuccessfully(true);
   };
 
-  const t = useTranslations("Contacts");
-
   return (
     <form
-      className="flex h-full w-full flex-col gap-5"
+      aria-label={t.form}
+      className="flex h-full w-full basis-1/2 flex-col gap-5"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex flex-col gap-1">
         <input
           disabled={isSubmitting}
-          placeholder={t("name")}
+          placeholder={t.name}
           className="rounded-md border px-3 py-2 caret-orange-600 focus:ring-2 focus:ring-orange-600 focus:outline-none dark:caret-orange-400 dark:focus:ring-orange-400"
           {...register("name", {
-            required: t("required"),
-            maxLength: { value: 30, message: `${t("name")} ${t("maxLength")}` },
-            minLength: { value: 2, message: `${t("name")} ${t("minLength")}` },
-            pattern: { value: /^[A-Za-z\s]+$/, message: t("namePattern") },
+            required: t.required,
+            maxLength: { value: 30, message: `${t.name} ${t.maxLength}` },
+            minLength: { value: 2, message: `${t.name} ${t.minLength}` },
+            pattern: { value: /^[A-Za-z\s]+$/, message: t.namePattern },
           })}
           aria-invalid={errors.name ? "true" : "false"}
         />
@@ -82,13 +98,13 @@ function ContactForm() {
         <input
           disabled={isSubmitting}
           type="email"
-          placeholder={t("email")}
+          placeholder={t.email}
           className="rounded-md border px-3 py-2 caret-orange-600 focus:ring-2 focus:ring-orange-600 focus:outline-none dark:caret-orange-400 dark:focus:ring-orange-400"
           {...register("email", {
-            required: t("required"),
+            required: t.required,
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-              message: t("emailPattern"),
+              message: t.emailPattern,
             },
           })}
           aria-invalid={errors.email ? "true" : "false"}
@@ -106,19 +122,19 @@ function ContactForm() {
       <div className="flex flex-col gap-1">
         <textarea
           disabled={isSubmitting}
-          placeholder={t("placeholderMessage")}
+          placeholder={t.placeholderMessage}
           className="h-60 resize-y rounded-md border px-3 py-2 caret-orange-600 focus:ring-2 focus:ring-orange-600 focus:outline-none lg:h-80 dark:caret-orange-400 dark:focus:ring-orange-400"
           {...register("message", {
-            required: t("required"),
+            required: t.required,
             minLength: {
               value: 5,
-              message: `${t("message")} ${t("minLength")}`,
+              message: `${t.message} ${t.minLength}`,
             },
             maxLength: {
               value: 300,
-              message: `${t("message")} ${t("maxLength")}`,
+              message: `${t.message} ${t.maxLength}`,
             },
-            validate: (value) => value.trim().length > 0 || t("messagePattern"),
+            validate: (value) => value.trim().length > 0 || t.messagePattern,
           })}
           aria-invalid={errors.message ? "true" : "false"}
         />
@@ -143,7 +159,7 @@ function ContactForm() {
               aria-hidden
               className="block h-6 w-6 animate-spin rounded-full border-4 border-t-4 border-orange-700/50 border-t-white/90 border-r-white/90 dark:border-orange-500/60 dark:border-t-white/90 dark:border-r-white/90"
             />
-            <span className="block">{t("loading")}</span>
+            <span className="block">{t.loading}</span>
           </div>
         ) : isSentSuccessfully ? (
           <div className="flex items-center justify-center gap-1">
@@ -151,10 +167,10 @@ function ContactForm() {
               aria-hidden
               className="fill-white text-orange-600 dark:text-orange-400"
             />
-            <span className="block">{t("success")}</span>
+            <span className="block">{t.success}</span>
           </div>
         ) : (
-          <span>{t("submit")}</span>
+          <span>{t.submit}</span>
         )}
       </button>
     </form>

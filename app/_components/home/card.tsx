@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 import { LazyMotion, AnimatePresence } from "motion/react";
 import * as m from "motion/react-m";
 const loadFeatures = () =>
-  import("../../lib/features").then((res) => res.default);
+  import("../../../lib/features").then((res) => res.default);
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,7 +37,7 @@ function Card({
 
   return (
     <LazyMotion features={loadFeatures}>
-      <m.div className="_space-y-4 h-max rounded-md border border-gray-200 px-4 py-3 text-black/70 lg:basis-1/2 dark:border-zinc-800 dark:text-white/60">
+      <m.div className="h-max rounded-md border border-gray-200 px-4 py-3 text-black/70 lg:basis-1/2 dark:border-zinc-800 dark:text-white/60">
         <button
           type="button"
           aria-expanded={isOpen}

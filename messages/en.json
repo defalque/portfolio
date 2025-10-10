@@ -24,12 +24,13 @@
     "aria-social": "Connect with me",
     "aria-skills": "My skills",
     "github": "Go to Marco De Falco's Github page",
-    "gmail": "Send an email to Marco De Falco via Gmail"
+    "gmail": "Send an email to Marco De Falco via Gmail",
+    "cv": "View my Curriculum Vitae"
   },
   "About": {
     "title-about": "About Me",
-    "title-about-text": "I am 27 years old and hold a <link>bachelor's degree in Computer Science</link>. In recent years, I have focused my professional development on web technologies, with a particular emphasis on frontend development.",
-    "aria-title-about-text": "I am 27 years old and hold a bachelor's degree in Computer Science. In recent years, I have focused my professional development on web technologies, with a particular emphasis on frontend development.",
+    "title-about-text": "I am 27 years old and hold a <link>bachelor's degree in Computer Science</link>. In recent years, I have focused my professional development on web technologies, with a particular emphasis on frontend development. I’ve been diving into modern web technologies, mainly focused on building responsive, accessible, and fast user interfaces. I’m driven by the opportunity to work in collaborative teams where I can keep learning, take on new challenges, and grow both as a frontend/full-stack/mobile developer and in UI/UX design.",
+    "aria-title-about-text": "I am 27 years old and hold a bachelor's degree in Computer Science. In recent years, I have focused my professional development on web technologies, with a particular emphasis on frontend development. I’ve been diving into modern web technologies, mainly focused on building responsive, accessible, and fast user interfaces. I’m driven by the opportunity to work in collaborative teams where I can keep learning, take on new challenges, and grow both as a frontend/full-stack/mobile developer and in UI/UX design.",
     "link": "Open my bachelor's certificate PDF"
   },
   "My-Work": {
@@ -43,12 +44,13 @@
   },
   "Skills": {
     "skills": "Tech Skills",
-    "frontend": "<b>Frontend Development:</b> Proficient in using React.js and modern frontend architectures, with a strong preference for Tailwind CSS to build fast and responsive user interfaces. Solid command of HTML5, CSS3, and JavaScript (ES6+).",
-    "mobile": "<b>Mobile Development:</b> Currently expanding skills in React Native for cross-platform mobile development.",
-    "full-stack": "<b>Full-Stack & Frameworks:</b> Good experience with Next.js for building full-stack applications, leveraging both static generation and server-side rendering.",
-    "pl": "<b>Programming Languages:</b> Strong familiarity with JavaScript and TypeScript. University-level basic knowledge of C and Java.",
-    "db": "<b>Databases & Backend:</b> Good command of relational databases (PostgreSQL and MySQL) and NoSQL solutions like MongoDB. Hands-on experience with Supabase as a backend-as-a-service platform.",
-    "tools": "<b>Version Control & Tooling:</b> Familiar with Git-based workflows, modern development environments, and collaborative coding practices."
+    "frontend": "<b>Frontend Development</b> - Proficient in using React.js and modern frontend architectures, with a strong preference for Tailwind CSS to build fast and responsive user interfaces. Solid command of HTML5, CSS3, and JavaScript (ES6+).",
+    "mobile": "<b>Mobile Development</b> - Currently expanding skills in React Native for cross-platform mobile development.",
+    "full-stack": "<b>Full-Stack & Frameworks</b> - Good experience with Next.js for building full-stack applications, leveraging both static generation and server-side rendering.",
+    "pl": "<b>Programming Languages</b> - Strong familiarity with JavaScript and TypeScript. University-level basic knowledge of C and Java.",
+    "db": "<b>Databases & Backend</b> - Good command of relational databases (PostgreSQL and MySQL) and NoSQL solutions like MongoDB. Hands-on experience with Supabase as a backend-as-a-service platform.",
+    "testing": "<b>Testing</b> - Currently learning Jest, React Testing Library, Mock Service Worker, Cypress, and Cypress Testing Library.",
+    "tools": "<b>Version Control & Tooling</b> - Familiar with Git-based workflows, modern development environments, and collaborative coding practices."
   },
   "My-Projects": {
     "title": "My Projects",
@@ -60,6 +62,7 @@
   },
   "Projects": {
     "nextjs": "Next.js",
+    "next-intl": "Next Internationalization",
     "javascript": "JavaScript",
     "typescript": "TypeScript",
     "supabase": "Supabase",
@@ -73,6 +76,7 @@
     "zod": "Zod",
     "headless": "Headless UI",
     "form": "React Hook Form",
+    "chart": "Recharts",
     "category": "Category",
     "tech-stack": "Tech stack",
     "ecommerce": "E-commerce",

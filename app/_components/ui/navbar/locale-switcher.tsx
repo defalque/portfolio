@@ -3,19 +3,25 @@
 import {
   Select,
   SelectContent,
-  SelectItem,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { ReactNode } from "react";
 
-function LocaleSwitcher() {
-  const currentLocale = useLocale();
+function LocaleSwitcher({
+  tSelect,
+  tCurrentLocale,
+  currentLocale,
+  children,
+}: {
+  tSelect: string;
+  tCurrentLocale: string;
+  currentLocale: string;
+  children: ReactNode;
+}) {
   const router = useRouter();
   const pathname = usePathname();
-  const t = useTranslations("Locale");
 
   const handleLocaleChange = (newLocale: string) => {
     router.replace(pathname, { locale: newLocale });
@@ -25,24 +31,12 @@ function LocaleSwitcher() {
     <Select defaultValue={currentLocale} onValueChange={handleLocaleChange}>
       <SelectTrigger
         className="bg-background/70 cursor-pointer font-semibold uppercase backdrop-blur-xs focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:outline-none dark:focus-visible:ring-orange-400"
-        aria-label={t("select")}
+        aria-label={tSelect}
       >
-        <SelectValue
-          placeholder={currentLocale}
-          aria-label={t(currentLocale)}
-        />
+        <SelectValue placeholder={currentLocale} aria-label={tCurrentLocale} />
       </SelectTrigger>
       <SelectContent className="bg-background/70 z-120 backdrop-blur-xs">
-        {routing.locales.map((locale) => (
-          <SelectItem
-            key={locale}
-            value={locale}
-            className="cursor-pointer font-semibold uppercase"
-            aria-label={t(locale)}
-          >
-            {locale}
-          </SelectItem>
-        ))}
+        {children}
       </SelectContent>
     </Select>
   );

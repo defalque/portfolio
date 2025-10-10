@@ -1,0 +1,161 @@
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         114 kB
+├ ƒ /[locale]                    23.8 kB         210 kB
+├ ƒ /[locale]/[...rest]              0 B         186 kB
+├ ƒ /[locale]/contacts           10.2 kB         196 kB
+├ ƒ /[locale]/my-projects        12.6 kB         199 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     114 kB
+  ├ chunks/01d64cd35924341a.js   20.4 kB
+  ├ chunks/0fcaac5e855b17c6.js   17.2 kB
+  └ chunks/f2056b80fa0bc4c0.js   59.2 kB
+  └ other shared chunks (total)  17.4 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+// AFTER <Toaster /> opt
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         114 kB
+├ ƒ /[locale]                    23.8 kB         201 kB
+├ ƒ /[locale]/[...rest]              0 B         177 kB
+├ ƒ /[locale]/contacts           19.4 kB         197 kB
+├ ƒ /[locale]/my-projects        12.6 kB         190 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     114 kB
+  ├ chunks/01d64cd35924341a.js   20.4 kB
+  ├ chunks/0fcaac5e855b17c6.js   17.2 kB
+  └ chunks/f2056b80fa0bc4c0.js   59.2 kB
+  └ other shared chunks (total)  17.4 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+//AFTER <Navbar /> Toggles opt
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         114 kB
+├ ƒ /[locale]                    33.1 kB         182 kB
+├ ƒ /[locale]/[...rest]              0 B         149 kB
+├ ƒ /[locale]/contacts             20 kB         169 kB
+├ ƒ /[locale]/my-projects        21.1 kB         170 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     114 kB
+  ├ chunks/0eb1a4f3f0c40cbd.js   17.2 kB
+  ├ chunks/150316a471952cee.js   59.2 kB
+  └ chunks/980a40ab20ad0eec.js   20.3 kB
+  └ other shared chunks (total)  17.5 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+//AFTER <ProjectCardDrawer /> opt
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         114 kB
+├ ƒ /[locale]                    33.1 kB         182 kB
+├ ƒ /[locale]/[...rest]              0 B         149 kB
+├ ƒ /[locale]/contacts             20 kB         169 kB
+├ ƒ /[locale]/my-projects          744 B         149 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     114 kB
+  ├ chunks/0eb1a4f3f0c40cbd.js   17.2 kB
+  ├ chunks/150316a471952cee.js   59.2 kB
+  └ chunks/980a40ab20ad0eec.js   20.3 kB
+  └ other shared chunks (total)  17.5 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+//AFTER <ContactForm /> opt
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         115 kB
+├ ƒ /[locale]                    33.1 kB         182 kB
+├ ƒ /[locale]/[...rest]              0 B         149 kB
+├ ƒ /[locale]/contacts           9.83 kB         159 kB
+├ ƒ /[locale]/my-projects          760 B         150 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     115 kB
+  ├ chunks/0eb1a4f3f0c40cbd.js   17.2 kB
+  ├ chunks/150316a471952cee.js   59.2 kB
+  ├ chunks/4d7717f44cb56872.js   13.3 kB
+  └ chunks/ac76bc0efccb9a4a.js   12.7 kB
+  └ other shared chunks (total)  12.2 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+//AFTER <Card /> opt
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         115 kB
+├ ƒ /[locale]                    24.9 kB         174 kB
+├ ƒ /[locale]/[...rest]              0 B         149 kB
+├ ƒ /[locale]/contacts           9.83 kB         159 kB
+├ ƒ /[locale]/my-projects          760 B         150 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     115 kB
+  ├ chunks/0eb1a4f3f0c40cbd.js   17.2 kB
+  ├ chunks/150316a471952cee.js   59.2 kB
+  ├ chunks/4d7717f44cb56872.js   13.3 kB
+  └ chunks/ac76bc0efccb9a4a.js   12.7 kB
+  └ other shared chunks (total)  12.2 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+//AFTER <LogoLoop /> opt
+Route (app)                         Size  First Load JS    
+┌ ○ /_not-found                      0 B         115 kB
+├ ƒ /[locale]                      719 B         150 kB
+├ ƒ /[locale]/[...rest]              0 B         149 kB
+├ ƒ /[locale]/contacts           9.83 kB         159 kB
+├ ƒ /[locale]/my-projects          761 B         150 kB
+├ ○ /apple-icon.png                  0 B            0 B
+├ ○ /icon0.svg                       0 B            0 B
+└ ○ /icon1.png                       0 B            0 B
++ First Load JS shared by all     115 kB
+  ├ chunks/0eb1a4f3f0c40cbd.js   17.2 kB
+  ├ chunks/150316a471952cee.js   59.2 kB
+  ├ chunks/4d7717f44cb56872.js   13.3 kB
+  └ chunks/ac76bc0efccb9a4a.js   12.7 kB
+  └ other shared chunks (total)  12.2 kB
+
+
+ƒ Middleware                     49.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

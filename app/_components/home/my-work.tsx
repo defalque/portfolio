@@ -1,9 +1,37 @@
 import { Monitor, Smartphone } from "lucide-react";
-import Card from "../card";
 import { useTranslations } from "next-intl";
+import CardWrapper from "./card-wrapper";
 
 function MyWork() {
   const t = useTranslations("My-Work");
+
+  const CARDS = [
+    {
+      title: t("subtitle1-whatido"),
+      list: [
+        { text: "Landing page" },
+        { text: t("text1-whatido") },
+        { text: t("text2-whatido") },
+        { text: t("text3-whatido") },
+      ],
+      icon: (
+        <Monitor
+          aria-hidden
+          className="size-6 text-orange-600 dark:text-orange-400"
+        />
+      ),
+    },
+    {
+      title: t("subtitle2-whatido"),
+      list: [{ text: t("text4-whatido") }],
+      icon: (
+        <Smartphone
+          aria-hidden
+          className="size-6 text-orange-600 dark:text-orange-400"
+        />
+      ),
+    },
+  ];
 
   return (
     <section
@@ -21,32 +49,14 @@ function MyWork() {
         role="group"
         className="flex flex-col gap-5 text-sm font-stretch-semi-expanded lg:flex-row"
       >
-        <Card
-          icon={
-            <Monitor
-              aria-hidden
-              className="size-6 text-orange-600 dark:text-orange-400"
-            />
-          }
-          title={t("subtitle1-whatido")}
-          list={[
-            { text: "Landing page" },
-            { text: t("text1-whatido") },
-            { text: t("text2-whatido") },
-            { text: t("text3-whatido") },
-          ]}
-        />
-
-        <Card
-          icon={
-            <Smartphone
-              aria-hidden
-              className="size-6 text-orange-600 dark:text-orange-400"
-            />
-          }
-          title={t("subtitle2-whatido")}
-          list={[{ text: t("text4-whatido") }]}
-        />
+        {CARDS.map((card) => (
+          <CardWrapper
+            key={card.title}
+            title={card.title}
+            icon={card.icon}
+            list={card.list}
+          />
+        ))}
       </div>
     </section>
   );

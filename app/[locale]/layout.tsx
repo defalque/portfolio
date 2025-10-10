@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+
 import "../globals.css";
 import { geistMono, geistSans } from "../_fonts/font";
+
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
+
 import { notFound } from "next/navigation";
-import Navbar from "../_components/ui/navbar/navbar";
+
 import { ThemeProvider } from "../_components/theme-provider";
+
+import Navbar from "../_components/ui/navbar/navbar";
 import Footer from "../_components/ui/footer/footer";
-import { Toaster } from "@/components/ui/sonner";
+
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -60,7 +66,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
             <Footer />
 
-            <Toaster position="top-right" richColors closeButton />
+            <Analytics />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

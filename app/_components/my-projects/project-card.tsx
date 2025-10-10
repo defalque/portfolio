@@ -3,10 +3,12 @@ import Link from "next/link";
 import { StaticImageData } from "next/image";
 import { Code } from "lucide-react";
 import { LiaLinkSolid } from "react-icons/lia";
+
 import ProjectCardImg from "./project-card-img";
 import ProjectCardDrawer from "./project-card-drawer";
 
 function ProjectCard({
+  index,
   title,
   type,
   srcLight,
@@ -17,6 +19,7 @@ function ProjectCard({
   stack,
   isDemo,
 }: {
+  index: number;
   title: string;
   type: string;
   srcLight: StaticImageData;
@@ -31,7 +34,7 @@ function ProjectCard({
 
   return (
     <li className="flex flex-col gap-5">
-      <div className="order-2 flex items-center justify-between">
+      <div className="order-2 flex items-start justify-between gap-3">
         <div>
           <h2 className="text-xl font-medium md:text-2xl dark:text-white/90">
             {title}
@@ -90,13 +93,19 @@ function ProjectCard({
         </ul>
       </div>
 
-      <ProjectCardImg
-        ariaLabel={t("link1-label")}
-        websiteLink={websiteLink}
-        srcLight={srcLight}
-        srcDark={srcDark ? srcDark : srcLight}
-        title={title}
-      />
+      <Link
+        aria-label={t("link1-label")}
+        href={websiteLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative order-1 aspect-7/4 w-full overflow-hidden rounded-md border border-gray-100 shadow transition-discrete duration-500 hover:scale-105 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:outline-none active:scale-105 dark:border-zinc-900 dark:shadow-zinc-900 dark:focus-visible:ring-orange-400"
+      >
+        <ProjectCardImg
+          index={index}
+          srcLight={srcLight}
+          srcDark={srcDark ? srcDark : srcLight}
+        />
+      </Link>
     </li>
   );
 }

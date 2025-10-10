@@ -1,4 +1,5 @@
-import ContactForm from "@/app/_components/ui/form/contact-form";
+import ContactFormWrapper from "@/app/_components/ui/form/contact-form-wrapper";
+import { Toaster } from "@/components/ui/sonner";
 import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -50,9 +51,9 @@ function Page() {
             </div>
 
             <div>
-              <span>{t("speaks")}: </span>
+              <span>Email: </span>
               <span className="font-medium text-black dark:text-white">
-                {t("languages")}
+                marcodefalco.work@gmail.com
               </span>
             </div>
 
@@ -66,6 +67,13 @@ function Page() {
               </Link>
             </div>
 
+            <div>
+              <span>{t("speaks")}: </span>
+              <span className="font-medium text-black dark:text-white">
+                {t("languages")}
+              </span>
+            </div>
+
             <div className="flex items-center gap-2">
               <span>{t("transport")}</span>
               <Check className="inline size-5 text-orange-600 sm:size-6 dark:text-orange-400" />
@@ -73,7 +81,26 @@ function Page() {
           </div>
 
           <div aria-label={t("form")} role="group" className="basis-1/2">
-            <ContactForm />
+            <Toaster position="top-right" richColors closeButton />
+
+            <ContactFormWrapper
+              t={{
+                form: t("form"),
+                required: t("required"),
+                name: t("name"),
+                maxLength: t("maxLength"),
+                minLength: t("minLength"),
+                namePattern: t("namePattern"),
+                email: t("email"),
+                emailPattern: t("emailPattern"),
+                placeholderMessage: t("placeholderMessage"),
+                message: t("message"),
+                messagePattern: t("messagePattern"),
+                loading: t("loading"),
+                success: t("success"),
+                submit: t("submit"),
+              }}
+            />
           </div>
         </div>
       </section>

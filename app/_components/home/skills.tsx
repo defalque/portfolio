@@ -1,6 +1,14 @@
 import { useTranslations } from "next-intl";
 
-const keys = ["frontend", "full-stack", "mobile", "pl", "db", "tools"];
+const keys = [
+  "frontend",
+  "full-stack",
+  "mobile",
+  "pl",
+  "db",
+  "testing",
+  "tools",
+];
 
 function Skills() {
   const t = useTranslations("Skills");

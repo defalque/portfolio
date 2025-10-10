@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { CheckIcon, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -11,11 +10,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useTranslations } from "next-intl";
 
-export function ModeToggle() {
+function ModeToggle({
+  tToggle,
+  tLight,
+  tDark,
+  tSystem,
+}: {
+  tToggle: string;
+  tLight: string;
+  tDark: string;
+  tSystem: string;
+}) {
   const { setTheme, theme } = useTheme();
-  const t = useTranslations("Toggle");
 
   return (
     <DropdownMenu>
@@ -28,7 +35,7 @@ export function ModeToggle() {
           >
             <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
             <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-            <span className="sr-only">{t("toggle")}</span>
+            <span className="sr-only">{tToggle}</span>
           </Button>
         </DropdownMenuTrigger>
       </div>
@@ -41,24 +48,25 @@ export function ModeToggle() {
           onClick={() => setTheme("light")}
           className="flex cursor-pointer items-center justify-between"
         >
-          {t("light")}
+          {tLight}
           {theme === "light" && <CheckIcon aria-hidden className="size-5" />}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
           className="flex cursor-pointer items-center justify-between"
         >
-          {t("dark")}
+          {tDark}
           {theme === "dark" && <CheckIcon aria-hidden className="size-5" />}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
           className="flex cursor-pointer items-center justify-between"
         >
-          {t("system")}
+          {tSystem}
           {theme === "system" && <CheckIcon aria-hidden className="size-5" />}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
 }
+export default ModeToggle;

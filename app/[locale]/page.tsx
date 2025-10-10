@@ -20,7 +20,7 @@ export async function generateMetadata({
 export default function Home() {
   return (
     <div className="mx-auto md:max-w-2xl lg:max-w-4xl">
-      <div className="_divide-y mx-(--spacing-x) [--md-spacing-y:--spacing(16)] [--sm-spacing-y:--spacing(14)] [--spacing-y:--spacing(12)] sm:mx-(--sm-spacing-x) md:mx-(--md-spacing-x)">
+      <div className="mx-(--spacing-x) [--md-spacing-y:--spacing(16)] [--sm-spacing-y:--spacing(14)] [--spacing-y:--spacing(12)] sm:mx-(--sm-spacing-x) md:mx-(--md-spacing-x)">
         <Overview />
 
         <About />

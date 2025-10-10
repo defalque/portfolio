@@ -39,7 +39,7 @@ export default function Error({
             onClick={() => reset()}
             className="group cursor-pointer sm:text-base"
           >
-            <RefreshCcwIcon className="transition-discrete duration-500 group-hover:-rotate-90 group-active:-rotate-90" />
+            <RefreshCcwIcon className="transition-discrete duration-500 group-hover:-rotate-90 group-active:-rotate-180" />
             {t("button")}
           </Button>
         </div>

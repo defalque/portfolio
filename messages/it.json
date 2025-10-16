@@ -101,7 +101,7 @@
     "message": "Messaggio",
     "placeholderMessage": "Scrivi un messaggio...",
     "submit": "Invia",
-    "loading": "Invio in corso...",
+    "loading": "Invio...",
     "success": "Inviato",
     "required": "Campo obbligatorio.",
     "maxLength": "troppo lungo.",

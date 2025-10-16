@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
+
 import Overview from "../_components/home/overview";
 import About from "../_components/home/about";
 import MyWork from "../_components/home/my-work";
 import Skills from "../_components/home/skills";
-import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
   params,

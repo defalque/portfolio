@@ -9,7 +9,9 @@ function LogoTypeImg({
   alt: string;
   width: number;
 }) {
-  return <Image src={src} alt={alt} className="h-auto" width={width} />;
+  return (
+    <Image src={src} alt={alt} className="h-auto" width={width} unoptimized />
+  );
 }
 
 export default LogoTypeImg;

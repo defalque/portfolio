@@ -20,18 +20,50 @@ export const metadata: Metadata = {
     template: "%s - Marco De Falco",
     default: "Marco De Falco",
   },
+  metadataBase: new URL("https://marcodefalco.dev"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      it: "/it",
+      en: "/en",
+    },
+  },
   applicationName: "Marco De Falco",
   referrer: "origin-when-cross-origin",
   keywords: [
-    "Next.js",
-    "React",
+    "Marco De Falco",
+    "web developer",
+    "frontend developer",
+    "React developer",
+    "Next.js developer",
     "JavaScript",
-    "CSS",
+    "TypeScript",
+    "React",
+    "Next.js",
     "HTML",
+    "CSS",
+    "Tailwind CSS",
     "Supabase",
-    "Web developer",
+    "web development",
+    "responsive design",
+    "portfolio developer",
+    "sviluppatore web",
+    "programmatore front-end",
+    "developer portfolio",
+    "sviluppatore React",
   ],
   creator: "Marco De Falco",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      nositelinkssearchbox: true,
+      notranslate: true,
+    },
+  },
 };
 
 type Props = {
@@ -49,7 +81,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} text-black antialiased dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} highlight antialiased`}
       >
         <NextIntlClientProvider>
           <ThemeProvider

@@ -26,6 +26,7 @@ function LogoLoop({
                     role="presentation"
                     alt=""
                     fill
+                    unoptimized
                     sizes={
                       logo.title === "Next.js"
                         ? "(min-width: 1024px) 25vw, (min-width: 768px) 33.33vw, (min-width: 640px) 25vw, 33.33vw"
@@ -34,7 +35,7 @@ function LogoLoop({
                     className="object-contain opacity-70 transition-transform transition-discrete duration-300 group-hover:scale-105 group-hover:opacity-100 group-active:scale-105 group-active:opacity-100"
                   />
                 </div>
-                <span className="cursor-default font-semibold text-black/70 font-stretch-semi-expanded transition-discrete duration-300 group-hover:text-black group-active:text-black sm:text-base md:text-sm lg:text-base dark:text-white/60 dark:group-hover:text-white dark:group-active:text-white">
+                <span className="text-base-color cursor-default font-semibold font-stretch-semi-expanded transition-discrete duration-300 group-hover:text-black group-active:text-black sm:text-base md:text-sm lg:text-base dark:group-hover:text-white dark:group-active:text-white">
                   {logo.title}
                 </span>
               </div>

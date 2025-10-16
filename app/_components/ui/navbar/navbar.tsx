@@ -1,8 +1,9 @@
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import NavLink from "./nav-link";
 import NavbarToggles from "./navbar-toggles";
-import { shimmer } from "@/lib/shimmer";
 
 function Navbar() {
   const t = useTranslations("Navigation");
@@ -53,3 +54,40 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// import NavLinks from "./nav-links";
+// import { LazyMotion } from "motion/react";
+// import * as m from "motion/react-m";
+// const loadFeatures = () =>
+//   import("../../../../lib/features").then((res) => res.default);
+// import { useState } from "react";
+
+// const [activeTab, setActiveTab] = useState<AppPath | null>(pathname);
+
+// <LazyMotion key={link.href} features={loadFeatures}>
+//   <m.li
+//     layout
+//     tabIndex={0}
+//     onFocus={() => setActiveTab(link.href)}
+//     onMouseOver={() => setActiveTab(link.href)}
+//     onMouseLeave={() => setActiveTab(link.href)}
+//     className={`relative cursor-pointer px-2 py-1 text-sm transition-colors outline-none`}
+//   >
+//     {activeTab === link.href ? (
+//       <m.div
+//         layoutId="tab-indicator"
+//         className="absolute inset-0 rounded-lg bg-orange-500/15"
+//       />
+//     ) : null}
+//     <Link
+//       href={link.href}
+//       className={`relative rounded-xs px-1 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 sm:py-2 dark:focus-visible:ring-orange-400`}
+//     >
+//       <span
+//         className={`relative ${pathname === link.href ? "text-orange-600 dark:text-orange-400" : "titleColor"}`}
+//       >
+//         {link.name}
+//       </span>
+//     </Link>
+//   </m.li>
+// </LazyMotion>

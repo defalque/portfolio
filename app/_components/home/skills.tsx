@@ -16,9 +16,7 @@ function Skills() {
   const skills = keys.map((key) => ({
     title: t.rich(key, {
       b: (chunks) => (
-        <strong className="text-black font-stretch-expanded dark:text-white">
-          {chunks}
-        </strong>
+        <strong className="highlight font-stretch-expanded">{chunks}</strong>
       ),
     }),
   }));
@@ -38,7 +36,7 @@ function Skills() {
       <ul className="space-y-8 font-stretch-semi-expanded">
         {skills.map((skill, index) => (
           <li key={index} className="flex items-center">
-            <p className="text-sm/relaxed text-black/70 sm:text-base dark:text-white/60">
+            <p className="text-base-color text-sm/6.5 sm:text-base/loose">
               {skill.title}
             </p>
           </li>

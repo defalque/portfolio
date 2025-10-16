@@ -17,7 +17,7 @@ function About() {
       </h2>
       <p
         // aria-label={tr("aria-title-about-text")}
-        className="text-sm/relaxed text-black/70 font-stretch-semi-expanded sm:text-base md:text-lg/relaxed dark:text-white/60"
+        className="text-base-color text-sm/loose font-stretch-semi-expanded sm:text-base/loose md:text-lg/loose"
       >
         {tr("aria-title-about-text")}
         {/* {tr.rich("title-about-text", {

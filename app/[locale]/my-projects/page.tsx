@@ -20,6 +20,13 @@ export async function generateMetadata({
   return {
     title: t("my-projects-title"),
     description: t("my-projects-description"),
+    alternates: {
+      canonical: `/my-projects`,
+      languages: {
+        it: `/it/i-miei-progetti`,
+        en: `/en/my-projects`,
+      },
+    },
   };
 }
 
@@ -38,6 +45,7 @@ const PROJECTS = [
       "supabase",
       "authjs",
       "tailwind",
+      "stripe",
       "headless",
       "form",
       "zod",
@@ -74,7 +82,7 @@ const PROJECTS = [
     srcLight: portfolio,
     srcDark: portfolioDark,
     repoLink: "https://github.com/defalque/portfolio",
-    websiteLink: "https://marcodefalco.vercel.app/",
+    websiteLink: "https://marcodefalco.dev/",
     stack: [
       "nextjs",
       "typescript",
@@ -100,12 +108,12 @@ function Page() {
         aria-labelledby="my-projects"
         className="my-10 flex flex-col gap-5 self-center px-(--spacing-x) sm:px-(--sm-spacing-x) md:gap-8 md:px-(--md-spacing-x)"
       >
-        <h2
+        <h1
           id="my-projects"
           className="titleColor text-3xl font-semibold font-stretch-semi-expanded sm:text-3xl md:text-4xl"
         >
           {t("title")}
-        </h2>
+        </h1>
 
         <ul className="grid grid-cols-1 gap-x-12 gap-y-20 py-5 lg:grid-cols-2">
           {PROJECTS.map((project, i) => (

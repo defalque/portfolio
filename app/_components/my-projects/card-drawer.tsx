@@ -32,7 +32,7 @@ function CardDrawer({
         >
           <List
             aria-hidden
-            className="size-5 text-black/70 transition-discrete duration-300 group-hover:text-black md:size-6 dark:text-white/60 dark:group-hover:text-white"
+            className="text-base-color size-5 transition-discrete duration-300 group-hover:text-black md:size-6 dark:group-hover:text-white"
           />
         </button>
       </DrawerTrigger>

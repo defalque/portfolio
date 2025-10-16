@@ -60,7 +60,7 @@ function Overview() {
       ),
     },
     {
-      href: "/documents/cv.pdf",
+      href: "/documents/curriculum.pdf",
       ariaLabel: t("cv"),
       children: (
         <span className="size-7 text-[19px] font-bold text-black/70 uppercase transition-discrete duration-300 group-hover:text-black md:size-8 md:text-2xl lg:size-10 lg:text-4xl dark:text-white/60 dark:group-hover:text-white">
@@ -76,17 +76,17 @@ function Overview() {
         aria-labelledby="welcome"
         className="flex flex-col gap-8 self-center py-(--spacing-y) sm:py-(--sm-spacing-y) md:py-(--md-spacing-y)"
       >
-        <h2
+        <h1
           id="welcome"
           className="bg-linear-to-r from-stone-600 via-slate-600 to-zinc-600 bg-clip-text text-4xl font-semibold text-transparent font-stretch-semi-expanded sm:text-4xl md:text-5xl lg:text-6xl dark:from-stone-300 dark:via-slate-300 dark:to-zinc-300"
         >
           {t("job")}
-        </h2>
+        </h1>
 
         <div className="space-y-2">
           <p
             aria-label={t("aria-text")}
-            className="text-base text-black/70 font-stretch-expanded transition-shadow duration-500 sm:text-xl md:text-2xl lg:text-2xl/snug dark:text-white/60"
+            className="text-base-color text-base/relaxed font-stretch-expanded transition-shadow duration-500 sm:text-xl/relaxed md:text-2xl/relaxed"
           >
             <span role="presentation">
               {t.rich("text", {
@@ -112,7 +112,7 @@ function Overview() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group m-0.5 block w-fit rounded-md border p-3 transition-discrete duration-300 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 dark:hover:bg-zinc-900 dark:focus-visible:ring-orange-400"
+                  className="group m-0.5 block w-fit rounded-md border p-3 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 dark:hover:bg-zinc-900 dark:focus-visible:ring-orange-400"
                   aria-label={item.ariaLabel}
                 >
                   {item.children}

@@ -5,6 +5,10 @@ import { CircleCheckIcon } from "lucide-react";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "sonner";
+import { LazyMotion, AnimatePresence } from "motion/react";
+import * as m from "motion/react-m";
+const loadFeatures = () =>
+  import("../../../../lib/features").then((res) => res.default);
 
 export type Inputs = {
   name: string;
@@ -40,10 +44,12 @@ function ContactForm({
     setError,
   } = useForm<Inputs>();
 
-  const [isSentSuccessfully, setIsSentSuccessfully] = useState(false);
+  type ButtonState = "idle" | "loading" | "success";
+  const [buttonState, setButtonState] = useState<ButtonState>("idle");
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    setIsSentSuccessfully(false);
+    setButtonState("loading");
+
     const result = await sendEmail(data);
 
     if (Array.isArray(result)) {
@@ -57,12 +63,41 @@ function ContactForm({
     }
 
     if (result?.type === "error") {
+      setButtonState("idle");
       toast.error(result.message);
       return;
     }
 
     reset();
-    setIsSentSuccessfully(true);
+    setButtonState("success");
+
+    // DEV Mode
+    // setButtonState("loading");
+    // setTimeout(() => {
+    //   setButtonState("success");
+    // }, 1500);
+  };
+
+  const option = {
+    idle: t.submit,
+    loading: (
+      <>
+        <span
+          aria-hidden
+          className="_border-r-white/90 _dark:border-r-white/90 block h-5 w-5 animate-spin rounded-full border-4 border-t-4 border-orange-700/50 border-t-white/90 duration-100 dark:border-orange-500/60 dark:border-t-white/90"
+        />
+        <span className="block">{t.loading}</span>
+      </>
+    ),
+    success: (
+      <>
+        <CircleCheckIcon
+          aria-hidden
+          className="fill-white text-orange-600 dark:text-orange-400"
+        />
+        <span className="block">{t.success}</span>
+      </>
+    ),
   };
 
   return (
@@ -75,7 +110,7 @@ function ContactForm({
         <input
           disabled={isSubmitting}
           placeholder={t.name}
-          className="rounded-md border px-3 py-2 caret-orange-600 focus:ring-2 focus:ring-orange-600 focus:outline-none dark:caret-orange-400 dark:focus:ring-orange-400"
+          className="form-field-focus rounded-md border px-3 py-2"
           {...register("name", {
             required: t.required,
             maxLength: { value: 30, message: `${t.name} ${t.maxLength}` },
@@ -99,7 +134,7 @@ function ContactForm({
           disabled={isSubmitting}
           type="email"
           placeholder={t.email}
-          className="rounded-md border px-3 py-2 caret-orange-600 focus:ring-2 focus:ring-orange-600 focus:outline-none dark:caret-orange-400 dark:focus:ring-orange-400"
+          className="form-field-focus rounded-md border px-3 py-2"
           {...register("email", {
             required: t.required,
             pattern: {
@@ -123,7 +158,7 @@ function ContactForm({
         <textarea
           disabled={isSubmitting}
           placeholder={t.placeholderMessage}
-          className="h-60 resize-y rounded-md border px-3 py-2 caret-orange-600 focus:ring-2 focus:ring-orange-600 focus:outline-none lg:h-80 dark:caret-orange-400 dark:focus:ring-orange-400"
+          className="form-field-focus h-60 resize-y rounded-md border px-3 py-2 lg:h-80"
           {...register("message", {
             required: t.required,
             minLength: {
@@ -150,28 +185,28 @@ function ContactForm({
 
       <button
         type="submit"
-        disabled={isSubmitting || isSentSuccessfully}
-        className="dark:text-shadow w-full cursor-pointer rounded-md bg-orange-600 p-2 font-semibold text-white transition-discrete duration-300 hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-600 active:bg-orange-500 disabled:cursor-not-allowed disabled:hover:bg-orange-600 disabled:active:bg-orange-600 dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus-visible:outline-orange-400 dark:active:bg-orange-500 dark:disabled:hover:bg-orange-400 dark:disabled:active:bg-orange-400"
+        disabled={
+          isSubmitting || buttonState === "loading" || buttonState === "success"
+        }
+        className="dark:text-shadow relative w-full cursor-pointer overflow-hidden rounded-md bg-orange-600 p-2 font-semibold text-white transition-discrete duration-300 hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-600 active:bg-orange-500 disabled:cursor-not-allowed disabled:hover:bg-orange-600 disabled:active:bg-orange-600 dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus-visible:outline-orange-400 dark:active:bg-orange-500 dark:disabled:hover:bg-orange-400 dark:disabled:active:bg-orange-400"
       >
-        {isSubmitting ? (
-          <div className="flex items-center justify-center gap-3">
-            <span
-              aria-hidden
-              className="block h-6 w-6 animate-spin rounded-full border-4 border-t-4 border-orange-700/50 border-t-white/90 border-r-white/90 dark:border-orange-500/60 dark:border-t-white/90 dark:border-r-white/90"
-            />
-            <span className="block">{t.loading}</span>
-          </div>
-        ) : isSentSuccessfully ? (
-          <div className="flex items-center justify-center gap-1">
-            <CircleCheckIcon
-              aria-hidden
-              className="fill-white text-orange-600 dark:text-orange-400"
-            />
-            <span className="block">{t.success}</span>
-          </div>
-        ) : (
-          <span>{t.submit}</span>
-        )}
+        <LazyMotion features={loadFeatures}>
+          <AnimatePresence mode="popLayout" initial={false}>
+            <m.div
+              key={buttonState}
+              transition={{ type: "spring", bounce: 0, duration: 0.3 }}
+              initial={{ opacity: 0, y: -40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{
+                opacity: 0,
+                y: 40,
+              }}
+              className="flex items-center justify-center gap-3"
+            >
+              {option[buttonState]}
+            </m.div>
+          </AnimatePresence>
+        </LazyMotion>
       </button>
     </form>
   );

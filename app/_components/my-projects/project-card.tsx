@@ -36,12 +36,10 @@ function ProjectCard({
     <li className="flex flex-col gap-5">
       <div className="order-2 flex items-start justify-between gap-3">
         <div>
-          <h2 className="text-xl font-medium md:text-2xl dark:text-white/90">
-            {title}
-          </h2>
+          <h2 className="text-xl font-medium md:text-2xl">{title}</h2>
           <span
             aria-label={`${t(status)}, ${isDemo ? "Demo" : "Live"}`}
-            className="text-sm text-black/70 dark:text-white/60"
+            className="text-base-color text-sm"
           >
             {t(status)} {isDemo ? "- Demo" : "- Live"}
           </span>
@@ -68,7 +66,7 @@ function ProjectCard({
               >
                 <Code
                   aria-hidden
-                  className="size-5 text-black/70 transition-discrete duration-300 group-hover:text-black md:size-6 dark:text-white/60 dark:group-hover:text-white"
+                  className="text-base-color size-5 transition-discrete duration-300 group-hover:text-black md:size-6 dark:group-hover:text-white"
                 />
               </Link>
             </li>
@@ -85,7 +83,7 @@ function ProjectCard({
               >
                 <LiaLinkSolid
                   aria-hidden
-                  className="size-5 text-black/70 transition-discrete duration-300 group-hover:text-black md:size-6 dark:text-white/60 dark:group-hover:text-white"
+                  className="text-base-color size-5 transition-discrete duration-300 group-hover:text-black md:size-6 dark:group-hover:text-white"
                 />
               </Link>
             </li>

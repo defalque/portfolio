@@ -43,7 +43,7 @@ function Footer() {
   return (
     <footer className="mx-auto w-full font-stretch-expanded [--md-spacing-x:--spacing(0)] [--sm-spacing-x:--spacing(10)] [--spacing-x:--spacing(5)] md:max-w-2xl lg:max-w-4xl">
       <div className="_border-t mx-(--spacing-x) space-y-10 pt-16 pb-5 font-stretch-expanded sm:mx-(--sm-spacing-x) md:mx-(--md-spacing-x)">
-        <ul className="mx-auto flex w-fit flex-col items-center gap-5 text-xs text-black/70 sm:text-sm dark:text-white/60">
+        <ul className="text-base-color mx-auto flex w-fit flex-col items-center gap-5 text-xs sm:text-sm">
           {BRANDS.map((brand) => (
             <li key={brand.name} className="flex items-center gap-3">
               <span>{t(brand.name)}</span>
@@ -64,7 +64,7 @@ function Footer() {
           ))}
         </ul>
 
-        <p className="mx-auto w-fit py-2 text-center text-xs text-black/70 sm:text-sm dark:text-white/60">
+        <p className="text-base-color mx-auto w-fit py-2 text-center text-xs sm:text-sm">
           Copyright © {new Date().getFullYear()} Marco De Falco. {t("rights")}
         </p>
       </div>

@@ -7,6 +7,7 @@ function CardImg({ index, src }: { index: number; src: StaticImageData }) {
       src={src}
       alt=""
       fill
+      quality={50}
       priority={index < 5}
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       placeholder="blur"

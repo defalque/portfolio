@@ -2,7 +2,7 @@
 
 import { usePathname } from "@/i18n/navigation";
 
-type AppPath = "/" | "/my-projects" | "/contacts";
+export type AppPath = "/" | "/my-projects" | "/contacts";
 
 function NavLink({
   linkName,
@@ -15,7 +15,7 @@ function NavLink({
 
   return (
     <span
-      className={`${pathname === linkHref ? "text-orange-600 dark:text-orange-400" : "titleColor"}`}
+      className={`relative ${pathname === linkHref ? "text-orange-600 dark:text-orange-400" : "titleColor"}`}
     >
       {linkName}
     </span>
